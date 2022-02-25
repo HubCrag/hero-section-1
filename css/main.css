@@ -1,0 +1,437 @@
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-dark: #929292;
+  --color-light: #dbdbdb;
+  --color-primary: #07B464;
+  --color-primary-alt: #1C1E52;
+  --color-nav: #0B4654;
+  --color-secondary: #EBFCF4;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
+h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+img, fieldset, a img {
+  border: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=password],
+textarea {
+  -webkit-appearance: none;
+}
+
+input[type=submit],
+button {
+  cursor: pointer;
+}
+input[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button {
+  background: none;
+}
+
+textarea {
+  overflow: auto;
+}
+
+input, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+div, input, textarea, select, button,
+h1, h2, h3, h4, h5, h6, a, span, a:focus {
+  outline: none;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.custom-checkbox__field:checked + .custom-checkbox__content::after {
+  opacity: 1;
+}
+
+.custom-checkbox__field:focus + .custom-checkbox__content::before {
+  outline: 2px solid #f00;
+  outline-offset: 2px;
+}
+
+.custom-checkbox__field:disabled + .custom-checkbox__content {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/../fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/../fonts/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/../fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Athiti";
+  src: url("../fonts/../fonts/Athiti-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-black);
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  flex: 0 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.title {
+  color: var(--color-primary-alt);
+}
+.title span {
+  color: var(--color-primary);
+}
+
+/*Button*/
+.btn {
+  display: inline-block;
+  background: linear-gradient(180deg, #34e06f 0%, #07b464 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 2px 4px rgba(255, 255, 255, 0.25), inset 0px -2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 14px 67px;
+}
+.btn:hover {
+  box-shadow: 0 4px 13px -3px rgba(0, 0, 0, 0.37);
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+@media only screen and (max-width: 767px) {
+  .header__wrapper {
+    flex-wrap: wrap;
+  }
+}
+.header__wrapper .burger {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 28px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .header__wrapper .burger {
+    display: block;
+  }
+}
+.header__wrapper .burger:before, .header__wrapper .burger:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+.header__wrapper .burger:after {
+  top: auto;
+  bottom: 0;
+}
+.header__wrapper .burger__line {
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  transition: transform 0.3s ease-in-out;
+}
+.header__wrapper .burger.is-active:before {
+  top: 50%;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+.header__wrapper .burger.is-active:after {
+  top: 50%;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+.header__wrapper .burger.is-active .burger__line {
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav {
+  font-family: "Athiti", sans-serif;
+}
+@media only screen and (max-width: 767px) {
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: var(--color-secondary);
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav.is-active {
+    padding: 30px 0;
+    height: 100vh;
+    max-height: 100vh;
+  }
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 767px) {
+  .nav__list {
+    display: block;
+    text-align: center;
+  }
+}
+.nav__item:not(:last-of-type) {
+  margin-right: 35px;
+}
+@media only screen and (max-width: 767px) {
+  .nav__item:not(:last-of-type) {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .nav__item {
+    margin-right: 0;
+    margin-bottom: 22px;
+  }
+}
+.nav__link {
+  color: var(--color-nav);
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+}
+.nav__link:hover {
+  color: var(--color-primary);
+}
+.nav__link.is-active {
+  color: var(--color-primary);
+}
+
+.hero {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.hero .container {
+  height: 100%;
+}
+.hero__wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+@media only screen and (max-width: 767px) {
+  .hero__wrapper {
+    display: block;
+    margin-top: 140px;
+  }
+}
+.hero__data {
+  max-width: 523px;
+}
+@media only screen and (max-width: 767px) {
+  .hero__data {
+    text-align: center;
+  }
+}
+.hero__data .title {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 64px;
+  margin-bottom: 22px;
+}
+@media only screen and (max-width: 639px) {
+  .hero__data .title {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 13px;
+  }
+}
+.hero__data .info {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 33px;
+}
+@media only screen and (max-width: 639px) {
+  .hero__data .info {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 13px;
+  }
+}
+.hero__img {
+  position: absolute;
+  top: -700px;
+  right: -500px;
+  z-index: -1;
+}
+@media only screen and (max-width: 767px) {
+  .hero__img {
+    top: -100px;
+    right: -120px;
+  }
+  .hero__img img {
+    width: 800px;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 474px) {
+  .hero__img {
+    right: -100px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
